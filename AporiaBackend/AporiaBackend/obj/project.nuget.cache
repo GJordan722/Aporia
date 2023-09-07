@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "z7H/9v5QPS/tFhxX08VWG2e3FKetXf+vaN10aPFsAezY+dZANVFCYz/DgYTViKegIKYUhNbBsLvwrD9yHccUug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carbo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\carbo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\carbo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\carbo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\carbo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\carbo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
