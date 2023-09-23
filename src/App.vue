@@ -17,10 +17,9 @@
 </template>
 
 <script>
-import NavBar from './Components/Navbar.vue'
+import Navbar from './Components/AporiaNav.vue';
 
 export default {
-  name: "App",
   components: {
     NavBar
   },
