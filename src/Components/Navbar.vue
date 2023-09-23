@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex flex-column align-items-end">
-    <nav class="sticky-top navbar navbar-expand-lg" :style="{position: absolute}">
+  <div class="d-flex flex-column align-items-end sticky-top">
+    <nav class="navbar navbar-expand-lg" :style="{position: absolute}">
       <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -60,6 +60,7 @@
         <img class="img-fluid brand" src="../assets/Site_Deesign_Assets-09-cropped.svg" alt="">
       </a>
     </div>
+    <hr class="container-fluid" :style="{width: '90vw', borderTop: '.55rem solid #ffffff'}"/>
   </div>
 </template>
 
