@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Navbar from './Components/AporiaNav.vue';
+import NavBar from './Components/AporiaNav.vue';
 
 export default {
   components: {
