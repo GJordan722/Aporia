@@ -61,7 +61,8 @@ var x = setInterval(function() {
 <style scoped>
 #demo {
   color: white;
-  font-size: 10rem;
+  font-size: 12rem;
+  letter-spacing: .5rem;
   -webkit-text-stroke-width: .15rem;
   -webkit-text-stroke-color: black;
 }
