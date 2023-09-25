@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column align-items-end sticky-top pb-3" :style="{backgroundColor: '#ffffff'}">
-    <nav class="navbar navbar-expand-lg" :style="{position: absolute}">
+    <nav class="navbar navbar-expand-lg">
       <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,39 +23,13 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <img class="img-fluid " src="../assets/Images/INFLUENCER-cropped.svg" alt="">
+              <img class="img-fluid" src="../assets/Images/INFLUENCER-cropped.svg" alt="">
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="navbar-toggler-icon"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
-                <img class="img-fluid " src="../assets/Images/A_BLACK-cropped.svg" alt="">
-                About
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <img class="img-fluid " src="../assets/Images/SHOPPING-cropped.svg" alt="">
-                Store
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <img class="img-fluid " src="../assets/Images/CART-cropped.svg" alt="">  
-                Cart
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <img class="img-fluid " src="../assets/Images/INFLUENCER-cropped.svg" alt="">
-                Influencers
-              </a>
-            </div>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container-fluid text-center" :style="{height: '15vh'}">
+    <div class="container-fluid text-center" :style="{height: '12vh'}">
       <a href="#">
         <img class="img-fluid brand" src="../assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
       </a>
@@ -88,7 +62,6 @@
   .homeLogo {
     position: absolute;
     top: 40px;
-    height: 35vh;
     width: 100%;
     }
 
