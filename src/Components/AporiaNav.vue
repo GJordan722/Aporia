@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column align-items-end sticky-top bg-light pb-3">
+  <div class="d-flex flex-column align-items-end sticky-top pb-3" :style="{backgroundColor: '#ffffff'}">
     <nav class="navbar navbar-expand-lg" :style="{position: absolute}">
       <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
