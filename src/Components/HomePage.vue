@@ -1,15 +1,12 @@
 <template>
     <div class="container-fluid position-relative" id="homePage">
-      <div class="d-flex flex-column align-items-center pb-4 position-relative">
+      <div class="d-flex flex-column align-items-center pb-4 position-relative ">
         <div class="w-75 d-flex flex-column align-items-center">
-          <img class="img-fluid" src="../assets/Images/Main_Page_First_Pic.jpg" alt="">
-          <div class="position-absolute" :style="{top: '10vh'}">
-            <div class="d-flex flex-column" id="shopNow">
+          <div class="d-flex flex-column position-absolute" id="shopNow">
             <h1>VOLUME 1</h1>
             <button class="btn btn-light p-3" type="button">LIMITED STOCK - PREORDER NOW</button>
             </div>
-          </div>
-          
+          <img class="img-fluid" src="../assets/Images/Main_Page_First_Pic.jpg" alt="">
         </div>
       </div>
       <div class="row w-100">
@@ -142,11 +139,11 @@
   }
 
   #shopNow {
-    position: sticky;
+
     position: -webkit-sticky;
     height: 10vh;
     font-family: 'NEXT ART Regular';
-    align-self: flex;
+    top: 0;
     h1 {
       font-family: 'NEXT ART Bold' !important;
       font-size: 5vw;
