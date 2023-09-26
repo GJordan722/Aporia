@@ -7,7 +7,13 @@
       <div class="container-fluid text-center pt-5">
         <img class="img-fluid w-75" src="./assets/Images/Aporia_BLACK-cropped.svg" alt="">
       </div>
-      <h1 id="demo" class="d-flex flex-row justify-content-center"></h1>
+      <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
+        <h1 id="days" class="pl-1"></h1>
+        <h1 id="hours" class="pl-1"></h1>
+        <h1 id="minutes" class="pl-1"></h1>
+        <h1 id="seconds" class="pl-1"></h1>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -16,6 +22,7 @@
 // import NavBar from './Components/AporiaNav.vue';
 // import HomePage from './Components/HomePage.vue';  
 
+
 export default {
   components: {
     // NavBar,
@@ -23,7 +30,7 @@ export default {
   },
   data() {
     return {
-      
+
     };
   },
   mounted() {
@@ -40,19 +47,21 @@ export default {
     var distance = countDownDate - now;
 
     // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d:" + hours + "h:"
-    + minutes + "m:" + seconds + "s";
+    document.getElementById("days").innerHTML = days + ":";
+    document.getElementById("hours").innerHTML = hours + ":";
+    document.getElementById("minutes").innerHTML =  minutes + ":";
+    document.getElementById("seconds").innerHTML = seconds + "";
 
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
+      
     }
   });
   }
@@ -60,9 +69,9 @@ export default {
 </script>
 
 <style scoped>
-#demo {
+h1 {
   color: white;
-  font-size: 12rem;
+  font-size: 14rem;
   letter-spacing: .5rem;
   -webkit-text-stroke-width: .15rem;
   -webkit-text-stroke-color: black;
