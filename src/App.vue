@@ -85,7 +85,7 @@ h1 {
   color: white;
   font-size: 14rem;
   letter-spacing: .5rem;
-  -webkit-text-stroke-width: .15rem;
+  -webkit-text-stroke-width: .14rem;
   -webkit-text-stroke-color: black;
 }
 
@@ -93,7 +93,7 @@ h4 {
   color: white;
   font-size: 3rem;
   letter-spacing: .5rem;
-  -webkit-text-stroke-width: .08rem;
+  -webkit-text-stroke-width: .07rem;
   -webkit-text-stroke-color: black;
 }
 
