@@ -8,10 +8,22 @@
         <img class="img-fluid w-75" src="./assets/Images/Aporia_BLACK-cropped.svg" alt="">
       </div>
       <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
-        <h1 id="days" class="pl-1"></h1>
-        <h1 id="hours" class="pl-1"></h1>
-        <h1 id="minutes" class="pl-1"></h1>
-        <h1 id="seconds" class="pl-1"></h1>
+        <div class="d-flex flex-column">
+          <h1 id="days" class=""></h1>
+          <h4 class="text-center">DAY</h4>
+        </div>
+        <div class="d-flex flex-column">
+          <h1 id="hours" class=""></h1>
+          <h4 class="text-center">HOUR</h4>
+        </div>
+        <div class="d-flex flex-column">
+          <h1 id="minutes" class=""></h1>
+          <h4 class="text-center">MIN</h4>
+        </div>
+        <div class="d-flex flex-column">
+          <h1 id="seconds" class=""></h1>
+          <h4 class="text-center">SEC</h4>
+        </div>
       </div>
       
     </div>
@@ -74,6 +86,14 @@ h1 {
   font-size: 14rem;
   letter-spacing: .5rem;
   -webkit-text-stroke-width: .15rem;
+  -webkit-text-stroke-color: black;
+}
+
+h4 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  -webkit-text-stroke-width: .08rem;
   -webkit-text-stroke-color: black;
 }
 
