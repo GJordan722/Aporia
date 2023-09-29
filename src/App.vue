@@ -1,23 +1,74 @@
+<script setup>
+import { RouterView } from 'vue-router'
+// import HomePage from './Components/HomePage.vue';  
+</script>
+
 <template>
-  <div>
-    <NavBar/>
-    <HomePage/>
+  <main>
+    <div class="d-flex flex-column align-items-end sticky-top" :style="{backgroundColor: '#ffffff'}">
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <RouterLink to="/About" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/A_BLACK-cropped.svg" alt="">
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/SHOPPING-cropped.svg" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/CART-cropped.svg" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/INFLUENCER-cropped.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid text-center mb-2" :style="{height: '12vh'}">
+      <RouterLink to="/">
+        <img class="img-fluid brand" src="@/assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
+      </RouterLink>
+    </div>
+    
   </div>
+      <RouterView/>
+  </main>
 </template>
 
-<script>
-import NavBar from './Components/AporiaNav.vue';
-import HomePage from './Components/HomePage.vue';  
 
-export default {
-  components: {
-    NavBar,
-    HomePage
-  },
-  data() {
-    return {
-      
-    };
+
+<style scoped>
+  #image {
+    width: 30px;
+    height: 30px;
   }
-}
-</script>
+
+  .brand {
+    width: auto;
+    height: 100%;
+  }
+
+  .homeLogo {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    }
+
+    .navbar-nav > li {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+
+</style>

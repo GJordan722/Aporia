@@ -30,9 +30,24 @@
         <div class="m-5 pt-5" id="timer">
           V1 PREODER ENDS
         </div>
-        <div id="container-fluid">
-          <p id="demo"></p>
-        </div>
+        <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
+          <div class="d-flex flex-column">
+            <h1 id="days" class=""></h1>
+            <h4 class="text-center">DAY</h4>
+          </div>
+          <div class="d-flex flex-column">
+            <h1 id="hours" class=""></h1>
+            <h4 class="text-center">HOUR</h4>
+          </div>
+          <div class="d-flex flex-column">
+            <h1 id="minutes" class=""></h1>
+            <h4 class="text-center">MIN</h4>
+          </div>
+          <div class="d-flex flex-column">
+            <h1 id="seconds" class=""></h1>
+            <h4 class="text-center">SEC</h4>
+          </div>
+      </div>
         <div class="row">
           <div class="col-3">
 
@@ -50,7 +65,7 @@
           <div class="w-75">
             <div class="row position-relative">
               <div class="col-6 mb-4 pb-3">
-                <img class="img-fluid position-absolute w-100" id="btmGridLine" src="../assets/Images/Site_Deesign_Assets-03.svg" alt="">
+                <img class="img-fluid position-absolute w-100 " id="btmGridLine" src="../assets/Images/Site_Deesign_Assets-03.svg" alt="">
                 <img class="img-fluid"  src="../assets/Images/Main_Page_Bottom_Grid_Top_Left.jpg" alt="">
                
               </div>
@@ -79,38 +94,48 @@
   export default {
       data() {
           return {
-              
+              counter: ""
           }
       },
-      mounted() {
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 13, 2023 15:00:00").getTime();
+      methods: {
+        timer() {
+          // Set the date we're counting down to
+          var countDownDate = new Date("Oct 13, 2023 20:00:00").getTime();
 
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+          // Update the count down every 1 second
+          this.counter = setInterval(function() {
 
-        // Get today's date and time
-        var now = new Date().getTime();
+            // Get today's date and time
+            var now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + ":" + hours + ":"
-        + minutes + ":" + seconds;
+            // Display the result in the element with id="demo"
+            document.getElementById("days").innerHTML = days + ":";
+            document.getElementById("hours").innerHTML = hours + ":";
+            document.getElementById("minutes").innerHTML =  minutes + ":";
+            document.getElementById("seconds").innerHTML = seconds + "";
 
-        // If the count down is finished, write some text
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
+            // If the count down is finished, write some text
+            if (distance < 0) {
+              clearInterval(this.counter);
+              
+            }
+          });
         }
-        });
+      },
+      mounted() {
+        this.timer();
+      },
+      beforeUnmount() {
+        clearInterval(this.counter);
       }
   }
 </script>
@@ -167,11 +192,19 @@
 
   #demo {
     color: white;
-    font-size: 10rem;
-    letter-spacing: .2rem;
-    -webkit-text-stroke-width: .15rem;
-    -webkit-text-stroke-color: black; 
     font-family: 'NEXT ART Bold';
+    h1 {
+      font-size: 10rem;
+      letter-spacing: .5rem;
+      -webkit-text-stroke-width: .14rem;
+      -webkit-text-stroke-color: black; 
+    }
+    h4 {
+      font-size: 3rem;
+      letter-spacing: .5rem;
+      -webkit-text-stroke-width: .07rem;
+      -webkit-text-stroke-color: black; 
+    }
   }
 
   #btmGridLine {
