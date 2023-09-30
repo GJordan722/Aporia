@@ -10,7 +10,7 @@
                 <h1>ABOUT</h1>
             </div>
             <div class="container-fluid">
-                <div class="row bg-info">
+                <div class="row">
                     <div class="position-relative col-5 mx-5">
                         <img class="img-fluid" src="../assets/Images/Site_Deesign_Assets-05.svg" alt="">
                         <img class="img-fluid position-absolute" src="../assets/Images/A_WHITE.svg" alt="" :style="{left: '-1vh', top: '30vh'}">
