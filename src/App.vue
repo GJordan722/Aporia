@@ -46,28 +46,5 @@ import { RouterView } from 'vue-router'
 </template>
 
 
-
 <style scoped>
-  #image {
-    width: 30px;
-    height: 30px;
-  }
-
-  .brand {
-    width: auto;
-    height: 100%;
-  }
-
-  .homeLogo {
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    }
-
-    .navbar-nav > li {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-
 </style>
