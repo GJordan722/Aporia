@@ -4,7 +4,9 @@
         <div class="w-75 d-flex flex-column align-items-center">
           <div class="d-flex flex-column position-absolute" id="shopNow">
             <h1>VOLUME 1</h1>
-            <button class="btn btn-light p-3" type="button">LIMITED STOCK - PREORDER NOW</button>
+            <RouterLink to="/Store" class="">
+              <button class="btn btn-light p-3 w-100" type="button">LIMITED STOCK - PREORDER NOW</button>
+            </RouterLink>
             </div>
           <img class="img-fluid" src="../assets/Images/Main_Page_First_Pic.jpg" alt="">
         </div>
@@ -91,6 +93,8 @@
 </template>
 
 <script>
+
+
   export default {
       data() {
           return {

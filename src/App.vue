@@ -1,6 +1,5 @@
 <script setup>
 import { RouterView } from 'vue-router'
-// import HomePage from './Components/HomePage.vue';  
 </script>
 
 <template>
@@ -18,11 +17,11 @@ import { RouterView } from 'vue-router'
             </RouterLink>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <RouterLink to="/Store" class="nav-link">
               <img class="img-fluid" id="image" src="@/assets/Images/SHOPPING-cropped.svg" alt="">
-            </a>
+            </RouterLink>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <img class="img-fluid" id="image" src="@/assets/Images/CART-cropped.svg" alt="">
             </a>
@@ -31,16 +30,15 @@ import { RouterView } from 'vue-router'
             <a href="#" class="nav-link">
               <img class="img-fluid" id="image" src="@/assets/Images/INFLUENCER-cropped.svg" alt="">
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
-    <div class="container-fluid text-center mb-2" :style="{height: '12vh'}">
+    <div class="container-fluid text-center mb-3" :style="{height: '8vh'}">
       <RouterLink to="/">
         <img class="img-fluid brand" src="@/assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
       </RouterLink>
     </div>
-    
   </div>
       <RouterView/>
   </main>
