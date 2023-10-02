@@ -1,103 +1,82 @@
-<template>
-  <div>
-    <!-- <NavBar/>
-    <HomePage/> -->
-    <div class="d-flex flex-column align-items-center">
-      <div class="pb-5"></div>
-      <div class="container-fluid text-center pt-5">
-        <img class="img-fluid w-75" src="./assets/Images/Aporia_BLACK-cropped.svg" alt="">
-      </div>
-      <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
-        <div class="d-flex flex-column">
-          <h1 id="days" class=""></h1>
-          <h4 class="text-center">DAY</h4>
-        </div>
-        <div class="d-flex flex-column">
-          <h1 id="hours" class=""></h1>
-          <h4 class="text-center">HOUR</h4>
-        </div>
-        <div class="d-flex flex-column">
-          <h1 id="minutes" class=""></h1>
-          <h4 class="text-center">MIN</h4>
-        </div>
-        <div class="d-flex flex-column">
-          <h1 id="seconds" class=""></h1>
-          <h4 class="text-center">SEC</h4>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</template>
-
-<script>
-// import NavBar from './Components/AporiaNav.vue';
-// import HomePage from './Components/HomePage.vue';  
+<script setup>
+import { RouterView } from 'vue-router'
 
 
-export default {
-  components: {
-    // NavBar,
-    // HomePage
-  },
-  data() {
-    return {
-
-    };
-  },
-  mounted() {
-    // Set the date we're counting down to
-    var countDownDate = new Date("Oct 2, 2023 03:00:00").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    document.getElementById("days").innerHTML = days + ":";
-    document.getElementById("hours").innerHTML = hours + ":";
-    document.getElementById("minutes").innerHTML =  minutes + ":";
-    document.getElementById("seconds").innerHTML = seconds + "";
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      
-    }
-  });
-  }
-};
 </script>
 
+<template>
+  <main>
+    <div class="d-flex flex-column align-items-end sticky-top" :style="{backgroundColor: '#ffffff'}">
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <RouterLink to="/About" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/A_BLACK-cropped.svg" alt="">
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/Store" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/SHOPPING-cropped.svg" alt="">
+            </RouterLink>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/CART-cropped.svg" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img class="img-fluid" id="image" src="@/assets/Images/INFLUENCER-cropped.svg" alt="">
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid text-center mb-3" :style="{height: '10vh'}">
+      <RouterLink to="/">
+        <img class="img-fluid brand" src="@/assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
+      </RouterLink>
+    </div>
+  </div>
+      <RouterView/>
+  </main>
+</template>
+
+
 <style scoped>
-h1 {
-  color: white;
-  font-size: 14rem;
-  letter-spacing: .5rem;
-  -webkit-text-stroke-width: .14rem;
-  -webkit-text-stroke-color: black;
-}
+  #image {
+      width: 30px;
+      height: 30px;
+    }
+  .brand {
+    width: auto;
+    height: 100%;
+  }
+  .homeLogo {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    }
+    .navbar-nav > li {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
-h4 {
-  color: white;
-  font-size: 3rem;
-  letter-spacing: .5rem;
-  -webkit-text-stroke-width: .07rem;
-  -webkit-text-stroke-color: black;
-}
+    .nav-link:hover {
+      background-color: #C8020D;
+      img {
+        filter: invert(100%) sepia(0%) saturate(2878%) hue-rotate(0deg) brightness(104%) contrast(97%);
+      }
+    }
 
-#tbip {
-  font-family: 'NEXT ART Thin';
-}
+    .nav-link:focus {
+      background-color: #C8020D;
+      img {
+        filter: invert(100%) sepia(0%) saturate(2878%) hue-rotate(0deg) brightness(104%) contrast(97%);
+      }
+    }
 </style>

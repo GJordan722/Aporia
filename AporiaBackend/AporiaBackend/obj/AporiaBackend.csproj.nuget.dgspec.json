@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj": {}
+    "D:\\codeshi\\html\\Aporia\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj": {
+    "D:\\codeshi\\html\\Aporia\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj",
+        "projectUniqueName": "D:\\codeshi\\html\\Aporia\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj",
         "projectName": "AporiaBackend",
-        "projectPath": "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj",
+        "projectPath": "D:\\codeshi\\html\\Aporia\\AporiaBackend\\AporiaBackend\\AporiaBackend.csproj",
         "packagesPath": "C:\\Users\\carbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carbo\\source\\repos\\AporiaBackend\\AporiaBackend\\obj\\",
+        "outputPath": "D:\\codeshi\\html\\Aporia\\AporiaBackend\\AporiaBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
