@@ -131,7 +131,7 @@
 
 <template>
     <div>
-        <hr class="container-fluid mb-5 position-fixed" id="navHr"/>
+        <hr class="container-fluid mb-3" id="navHr"/>
         <div class="container-fluid">
             <div class="d-flex flex-row justify-content-center position-relative">
                 <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '2vh', background: '#ffffff'}">
@@ -157,7 +157,7 @@
             </div>
         </div>
 
-        <div class="container-fluid py-5 my-5 position-absolute" :style="{top: '80vh'}">
+        <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '80vh'}">
                 <img src="../assets/Images/Site_Deesign_Assets-10.svg" alt="" class="img-fluid">
         </div>
     </div>
