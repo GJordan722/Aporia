@@ -173,17 +173,19 @@ export default {
   height: 10vh;
   font-family: 'NEXT ART Regular';
   top: 0;
-  h1 {
+}
+
+#shopNow h1 {
     font-family: 'NEXT ART Bold' !important;
     font-size: 5vw;
     color: #ffffff;
   }
-  button {
+
+  #shopNow  button {
     font-size: 1.1vw;
     letter-spacing: .01vw;
     font-weight: 500 !important;
   }
-}
 
 #timer {
   color: #C8020D;
@@ -197,18 +199,18 @@ export default {
 #demo {
   color: white;
   font-family: 'NEXT ART Bold';
-  h1 {
-    font-size: 10rem;
-    letter-spacing: .5rem;
-    -webkit-text-stroke-width: .14rem;
-    -webkit-text-stroke-color: black; 
-  }
-  h4 {
-    font-size: 3rem;
-    letter-spacing: .5rem;
-    -webkit-text-stroke-width: .07rem;
-    -webkit-text-stroke-color: black; 
-  }
+}
+
+#demo h1 {
+  font-size: 10rem;
+  letter-spacing: .5rem;
+  -webkit-text-stroke: 2px black; 
+}
+
+#demo h4 {
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  -webkit-text-stroke: 2px black;
 }
 
 #btmGridLine {
