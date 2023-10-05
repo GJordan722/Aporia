@@ -1,6 +1,5 @@
 <script setup>
     // import ClassicPage from '../Components/ClassicBuyPage.vue'
-    
 
     const shiftTag = (event) => {
         const hide = document.getElementById('hide');
