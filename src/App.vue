@@ -1,6 +1,16 @@
 <script setup>
-import { RouterView } from 'vue-router'
+  import { RouterView } from 'vue-router'
 
+  const hide = () => {
+    const storeClassic = document.getElementById('storeClassic');
+    const storeLimited = document.getElementById('storeLimited');
+    const storeTailored = document.getElementById('storeTailored');
+
+    storeClassic.style.visibility = 'hidden';
+    storeLimited.style.visibility = 'hidden';
+    storeTailored.style.visibility = 'hidden';
+  }
+  
 
 </script>
 
@@ -14,12 +24,12 @@ import { RouterView } from 'vue-router'
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/About" class="nav-link">
+            <RouterLink to="/About" class="nav-link" @click="hide">
               <img class="img-fluid" id="image" src="@/assets/Images/A_BLACK-cropped.svg" alt="">
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/Store" class="nav-link">
+            <RouterLink to="/Store" class="nav-link" @click="hide">
               <img class="img-fluid" id="image" src="@/assets/Images/SHOPPING-cropped.svg" alt="">
             </RouterLink>
           </li>
@@ -37,7 +47,7 @@ import { RouterView } from 'vue-router'
       </div>
     </nav>
     <div class="container-fluid text-center mb-3" :style="{height: '10vh'}">
-      <RouterLink to="/">
+      <RouterLink to="/" @click="hide">
         <img class="img-fluid brand" src="@/assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
       </RouterLink>
     </div>
