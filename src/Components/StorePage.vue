@@ -71,6 +71,7 @@
                     storeLimited.style.visibility = 'hidden';
                     storeTailored.style.visibility = 'visible';
                 } else {
+                    tag3.classList.remove("active");
                     hide.style.visibility = 'visible';
                     hide1.style.visibility = 'visible';
                     storeClassic.style.visibility = 'hidden';
@@ -216,7 +217,7 @@
                     <h1 id="topTxt">V1 COLLECTION</h1>
                 </div>
                 <img src="../assets/Images/Site_Deesign_Assets-02.svg" alt="" class="w-50 position-absolute" :style="{top: '2vh', zIndex: '-1'}" id="hide">
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '0vh', background: '#C9A580', left: '0vw'}" id="tag1Div">
+                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '0vh', left: '0vw', background: '#C9A580'}" id="tag1Div">
                     <button @click="shiftTag" class="w-100 btn" id="tag1">
                         <h1 id="tagTxt">CLASSICS</h1>
                     </button>
@@ -270,7 +271,7 @@
         background-color: #C8020D;
     }
 
-    .btn:focus {
-        background: #C8020D;
+    .active {
+        background-color: #C8020D !important;
     }
 </style>
