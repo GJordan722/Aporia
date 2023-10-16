@@ -1,5 +1,4 @@
-<script setup>
-    // import ClassicPage from '../Components/ClassicBuyPage.vue'
+<script setup> 
     
     const checkActive = (id) => {
         const actives = document.querySelectorAll(".active");
@@ -217,17 +216,17 @@
                     <h1 id="topTxt">V1 COLLECTION</h1>
                 </div>
                 <img src="../assets/Images/Site_Deesign_Assets-02.svg" alt="" class="w-50 position-absolute" :style="{top: '2vh', zIndex: '-1'}" id="hide">
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '0vh', left: '0vw', background: '#C9A580'}" id="tag1Div">
+                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', left: '0vw', background: '#C9A580'}" id="tag1Div">
                     <button @click="shiftTag" class="w-100 btn" id="tag1">
                         <h1 id="tagTxt">CLASSICS</h1>
                     </button>
                 </div>
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '0vh', background: '#76C8BF', left: '37vw'}" id="tag2Div">
+                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#76C8BF', left: '37vw'}" id="tag2Div">
                     <button @click="shiftTag" class="w-100 btn" id="tag2">
                     <h1 id="tagTxt">LIMITED</h1>
                     </button>
                 </div>
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '0vh', background: '#239586', right: '0vw'}" id="tag3Div">
+                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#239586', right: '0vw'}" id="tag3Div">
                     <button @click="shiftTag" class="w-100 btn" id="tag3">
                     <h1 id="tagTxt">TAILORED</h1>
                     </button>
