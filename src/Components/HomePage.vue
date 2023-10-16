@@ -1,4 +1,5 @@
 <template>
+
   <div class="container-fluid position-relative" id="homePage">
     <div class="d-flex flex-column align-items-center pb-4 position-relative ">
       <div class="w-75 d-flex flex-column align-items-center">
@@ -30,7 +31,7 @@
         <img class="img-fluid" src="../assets/Images/Main_Page_Second_Pic.jpg" alt="">
       </div>
       <div class="m-5 pt-5" id="timer">
-        V1 PREODER ENDS
+        V1 COLLECTION ENDS
       </div>
       <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
         <div class="d-flex flex-column">
@@ -49,7 +50,7 @@
           <h1 id="seconds" class=""></h1>
           <h4 class="text-center">SEC</h4>
         </div>
-    </div>
+     </div>
       <div class="row">
         <div class="col-3">
 
@@ -104,7 +105,7 @@ export default {
     methods: {
       timer() {
         // Set the date we're counting down to
-        var countDownDate = new Date("Oct 13, 2023 20:00:00").getTime();
+        var countDownDate = new Date("Jan 13, 2024 20:00:00").getTime();
 
         // Update the count down every 1 second
         this.counter = setInterval(function() {
