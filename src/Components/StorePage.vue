@@ -157,7 +157,7 @@
             </div>
         </div>
 
-        <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '80vh'}">
+        <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '83vh'}">
                 <img src="../assets/Images/Site_Deesign_Assets-10.svg" alt="" class="img-fluid">
         </div>
     </div>
