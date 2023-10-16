@@ -1,15 +1,16 @@
 <script setup>
-import { RouterView } from 'vue-router'
+  import { RouterView } from 'vue-router'
 
-const hide = () => {
-  const storeClassic = document.getElementById('storeClassic');
-  const storeLimited = document.getElementById('storeLimited');
-  const storeTailored = document.getElementById('storeTailored');
+  const hide = () => {
+    const storeClassic = document.getElementById('storeClassic');
+    const storeLimited = document.getElementById('storeLimited');
+    const storeTailored = document.getElementById('storeTailored');
 
-  storeClassic.style.visibility = 'hidden';
-  storeLimited.style.visibility = 'hidden';
-  storeTailored.style.visibility = 'hidden';
-}
+    storeClassic.style.visibility = 'hidden';
+    storeLimited.style.visibility = 'hidden';
+    storeTailored.style.visibility = 'hidden';
+  }
+  
 
 </script>
 

@@ -12,6 +12,7 @@
     "@babel/eslint-parser": "^7.22.15",
     "@popperjs/core": "^2.11.8",
     "@shopify/shopify-api": "^7.7.0",
+    "@vue/cli": "^5.0.8",
     "bootstrap": "^5.3.2",
     "core-js": "^3.32.2",
     "crypto-browserify": "^3.12.0",
