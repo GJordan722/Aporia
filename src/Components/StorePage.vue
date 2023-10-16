@@ -210,7 +210,7 @@
 
 <template>
     <div>
-        <hr class="container-fluid mb-5 position-fixed" id="navHr"/>
+        <hr class="container-fluid mb-3" id="navHr"/>
         <div class="container-fluid">
             <div class="d-flex flex-row justify-content-center position-relative">
                 <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '10vh', background: '#ffffff'}" id="hide1">
