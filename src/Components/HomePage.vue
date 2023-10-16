@@ -105,7 +105,7 @@ export default {
     methods: {
       timer() {
         // Set the date we're counting down to
-        var countDownDate = new Date("Jan 13, 2024 20:00:00").getTime();
+        var countDownDate = new Date("Dec 13, 2023 20:00:00").getTime();
 
         // Update the count down every 1 second
         this.counter = setInterval(function() {
