@@ -1,5 +1,4 @@
 <script setup> 
-    
     const checkActive = (id) => {
         const actives = document.querySelectorAll(".active");
         if (actives != null) {
