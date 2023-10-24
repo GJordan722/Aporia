@@ -1,10 +1,40 @@
 <script setup>
   import { RouterView } from 'vue-router'
+  import { ref } from 'vue';
+  const screenWidth = ref(window.innerWidth).value;
+  var mobile = screenWidth > 768 ? false : true;
+
+  const checkActive = () => {
+        const actives = document.querySelectorAll(".active");
+        if (actives) {
+           actives.forEach((element) => {
+              element.classList.remove("active");
+           })
+        }
+   
+    }
 
   const hide = () => {
     const storeClassic = document.getElementById('storeClassic');
     const storeLimited = document.getElementById('storeLimited');
     const storeTailored = document.getElementById('storeTailored');
+    const tag1 = document.getElementById('tag1Div');
+    const tag2 = document.getElementById('tag2Div');
+    const tag3 = document.getElementById('tag3Div');
+    const hide = document.getElementById('hide');
+    const hide1 = document.getElementById('hide1');
+
+    if (tag1 && tag2 && tag3 && hide && hide1) {
+      checkActive();
+      tag1.style.top = '30vh';
+      tag1.style.transition = 'all .4s linear'
+      tag2.style.top = '40vh';
+      tag2.style.transition = 'all .4s linear'
+      tag3.style.top = '50vh';
+      tag3.style.transition = 'all .4s linear';
+      hide.style.visibility = 'visible';
+      hide1.style.visibility = 'visible';
+    }
 
     storeClassic.style.visibility = 'hidden';
     storeLimited.style.visibility = 'hidden';
@@ -18,13 +48,13 @@
   <main>
     <div class="d-flex flex-column align-items-end sticky-top" :style="{backgroundColor: '#ffffff'}">
     <nav class="navbar navbar-expand-lg">
-      <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" @click="hide">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/About" class="nav-link" @click="hide">
+            <RouterLink to="/About" class="nav-link" @click="hide" v-if="!mobile">
               <img class="img-fluid" id="image" src="@/assets/Images/A_BLACK-cropped.svg" alt="">
             </RouterLink>
           </li>
@@ -46,7 +76,7 @@
         </ul>
       </div>
     </nav>
-    <div class="container-fluid text-center mb-3" :style="{height: '10vh'}">
+    <div class="container-fluid text-center mb-3" :style="{height: '9vh', width: '100vw'}">
       <RouterLink to="/" @click="hide">
         <img class="img-fluid brand" src="@/assets/Images/Site_Deesign_Assets-09-cropped.svg" alt="">
       </RouterLink>
@@ -63,7 +93,7 @@
       height: 30px;
     }
   .brand {
-    width: auto;
+    width: 100vw;
     height: 100%;
   }
   .homeLogo {
@@ -89,4 +119,10 @@
         filter: invert(100%) sepia(0%) saturate(2878%) hue-rotate(0deg) brightness(104%) contrast(97%);
       }
     }
+
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+   }
 </style>

@@ -1,4 +1,13 @@
-<script setup> 
+<script setup>
+
+    import { ref } from 'vue';
+
+    const screenWidth = ref(window.innerWidth).value;
+ 
+
+    var mobile = screenWidth > 768 ? false : true;
+
+
     const checkActive = (id) => {
         const actives = document.querySelectorAll(".active");
         if (actives != null) {
@@ -21,6 +30,82 @@
         const tag2 = document.getElementById('tag2Div');
         const tag3 = document.getElementById('tag3Div');
 
+        if (mobile) {
+            if (event.currentTarget.id == "tag1") {
+                if (tag1.style.top == '30vh') {
+                    tag1.style.top = '0vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '60vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '68vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+                else if (tag1.style.top == '60vh') {
+                    tag1.style.top = '0vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '60vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '68vh';
+                } else {
+                    tag1.style.top = '30vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '40vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '50vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+            }
+            else if (event.currentTarget.id == "tag2") {
+                if (tag2.style.top == '40vh') {
+                    tag1.style.top = '60vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '0vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '68vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+                else if (tag2.style.top == '60vh' || tag2.style.top == '68vh') {
+                    tag1.style.top = '60vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '0vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '68vh';
+                    tag3.style.transition = 'all .4s linear'
+                } else {
+                    tag1.style.top = '30vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '40vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '50vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+            }
+            else if (event.currentTarget.id == "tag3") {
+                if (tag3.style.top == '50vh') {
+                    tag1.style.top = '60vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '68vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '0vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+                else if (tag3.style.top == '68vh') {
+                    tag1.style.top = '60vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '68vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '0vh';
+                    tag3.style.transition = 'all .4s linear'
+                } else {
+                    tag1.style.top = '30vh';
+                    tag1.style.transition = 'all .4s linear'
+                    tag2.style.top = '40vh';
+                    tag2.style.transition = 'all .4s linear'
+                    tag3.style.top = '50vh';
+                    tag3.style.transition = 'all .4s linear'
+                }
+            }
+        }
         switch  (event.currentTarget.id) {
             case "tag1":
                 if (!tag1.classList.contains("active")) {
@@ -77,128 +162,7 @@
                     storeTailored.style.visibility = 'hidden';
                 }
                 break;
-        }
-
-        // if (event.currentTarget.id == "tag1") {
-        //     if (tag1.style.top == '35vh') {
-        //         tag1.style.top = '2vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '55vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '65vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'visible';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'hidden';
-        //     }
-        //     else if (tag1.style.top == '55vh') {
-        //         tag1.style.top = '2vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '55vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '65vh';
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'visible';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'hidden';
-        //     } else {
-        //         tag1.style.top = '35vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '45vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '55vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'visible';
-        //         hide1.style.visibility = 'visible';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'hidden';
-        //     }
-            
-        // }
-        // else if (event.currentTarget.id == "tag2") {
-        //     if (tag2.style.top == '45vh') {
-        //         tag1.style.top = '55vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '2vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '65vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'visible';
-        //         storeTailored.style.visibility = 'hidden';
-        //     }
-        //     else if (tag2.style.top == '55vh' || tag2.style.top == '65vh') {
-        //         tag1.style.top = '55vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '2vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '65vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'visible';
-        //         storeTailored.style.visibility = 'hidden';
-        //     } else {
-        //         tag1.style.top = '35vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '45vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '55vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'visible';
-        //         hide1.style.visibility = 'visible';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'hidden';
-        //     }
-        // }
-        // else if (event.currentTarget.id == "tag3") {
-        //     if (tag3.style.top == '55vh') {
-        //         tag1.style.top = '55vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '65vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '2vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'visible';
-        //     }
-        //     else if (tag3.style.top == '65vh') {
-        //         tag1.style.top = '55vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '65vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '2vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'hidden';
-        //         hide1.style.visibility = 'hidden';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'visible';
-        //     } else {
-        //         tag1.style.top = '35vh';
-        //         tag1.style.transition = 'all .3s linear'
-        //         tag2.style.top = '45vh';
-        //         tag2.style.transition = 'all .3s linear'
-        //         tag3.style.top = '55vh';
-        //         tag3.style.transition = 'all .3s linear'
-        //         hide.style.visibility = 'visible';
-        //         hide1.style.visibility = 'visible';
-        //         storeClassic.style.visibility = 'hidden';
-        //         storeLimited.style.visibility = 'hidden';
-        //         storeTailored.style.visibility = 'hidden';
-        //     }
-        // }
+            }
 
 
     }
@@ -208,34 +172,66 @@
 
 <template>
     <div>
-        <hr class="container-fluid mb-3" id="navHr"/>
-        <div class="container-fluid">
-            <div class="d-flex flex-row justify-content-center position-relative">
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '10vh', background: '#ffffff'}" id="hide1">
-                    <h1 id="topTxt">V1 COLLECTION</h1>
+        <div v-if="mobile" class="position-relative m-0">
+            <hr class="container-fluid mb-3" id="navHr"/>
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-center position-relative">
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#ffffff'}" id="hide1">
+                        <h1 id="topTxt">V1 COLLECTION</h1>
+                    </div>
+                    <img src="../assets/Images/Site_Deesign_Assets-02.svg" alt="" class="position-absolute" :style="{top: '5vh', zIndex: '-1', width: '70vw'}" id="hide">
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '30vh', background: '#C9A580'}" id="tag1Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag1">
+                            <h1 id="tagTxt">CLASSICS</h1>
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '40vh', background: '#76C8BF'}" id="tag2Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag2">
+                            <h1 id="tagTxt">LIMITED</h1>
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '50vh', background: '#239586'}" id="tag3Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag3">
+                            <h1 id="tagTxt">TAILORED</h1>
+                        </button>
+                    </div>
                 </div>
-                <img src="../assets/Images/Site_Deesign_Assets-02.svg" alt="" class="w-50 position-absolute" :style="{top: '2vh', zIndex: '-1'}" id="hide">
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', left: '0vw', background: '#C9A580'}" id="tag1Div">
-                    <button @click="shiftTag" class="w-100 btn" id="tag1">
-                        <h1 id="tagTxt">CLASSICS</h1>
-                    </button>
-                </div>
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#76C8BF', left: '37vw'}" id="tag2Div">
-                    <button @click="shiftTag" class="w-100 btn" id="tag2">
-                    <h1 id="tagTxt">LIMITED</h1>
-                    </button>
-                </div>
-                <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#239586', right: '0vw'}" id="tag3Div">
-                    <button @click="shiftTag" class="w-100 btn" id="tag3">
-                    <h1 id="tagTxt">TAILORED</h1>
-                    </button>
-                </div>
-                
+            </div>
+
+            <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '67vh'}">
+                <img src="../assets/Images/Site_Deesign_Assets-10.svg" alt="" class="img-fluid">
             </div>
         </div>
 
-        <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '80vh'}">
-            <img src="../assets/Images/Site_Deesign_Assets-10.svg" alt="" class="img-fluid">
+        <div v-else>
+            <hr class="container-fluid mb-3" id="navHr"/>
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-center position-relative">
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '10vh', background: '#ffffff'}" id="hide1">
+                        <h1 id="topTxt">V1 COLLECTION</h1>
+                    </div>
+                    <img src="../assets/Images/Site_Deesign_Assets-02.svg" alt="" class="position-absolute" :style="{top: '5vh', zIndex: '-1', width: '40vw'}" id="hide">
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', left: '0vw', background: '#C9A580'}" id="tag1Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag1">
+                            <h1 id="tagTxt">CLASSICS</h1>
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#76C8BF', left: '37vw'}" id="tag2Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag2">
+                            <h1 id="tagTxt">LIMITED</h1>
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#239586', right: '0vw'}" id="tag3Div">
+                        <button @click="shiftTag" class="w-100 btn" id="tag3">
+                            <h1 id="tagTxt">TAILORED</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid pt-5 my-5 position-absolute" :style="{top: '80vh'}">
+                <img src="../assets/Images/Site_Deesign_Assets-10.svg" alt="" class="img-fluid">
+            </div>
         </div>
     </div>
 </template>
