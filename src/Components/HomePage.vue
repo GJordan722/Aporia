@@ -9,13 +9,13 @@
   <div v-if="mobile">
     <div class="d-flex flex-column align-items-center mx-2 position-relative ">
       <div class="d-flex flex-column align-items-center">
-        <div class="d-flex flex-column position-absolute w-75 px-2" id="shopNow" style="top: 5vh;">
+        <div class="d-flex flex-column position-absolute w-75 px-2" id="shopNow" style="top: 2vh;">
           <h1 class="w-100" style="color: #C8020D;">V1 COLLECTION OUT NOW</h1>
           <RouterLink to="/Store" class="">
             <button class="btn btn-light p-3 w-100" type="button" style="font-size: 1.3rem; font-weight: 700;">SHOP</button>
           </RouterLink>
         </div>
-        <img class="img-fluid " src="../assets/Images/Main_Page_First_Pic.jpg" alt="" style="height: 80vh;">
+        <img class="img-fluid " src="../assets/Images/folieadeux.jpg" alt="" style="height: 80vh;">
       </div>
     </div>
   </div>
