@@ -48,10 +48,8 @@
   <main>
     <div class="d-flex flex-column align-items-end sticky-top" :style="{backgroundColor: '#ffffff'}">
     <nav class="navbar navbar-expand-lg">
-      <button class="navbar-toggler navbartoggler-right" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" @click="hide">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <div class="">
         <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink to="/About" class="nav-link" @click="hide" v-if="!mobile">
