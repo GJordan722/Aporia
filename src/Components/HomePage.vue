@@ -25,7 +25,7 @@
         <div class="d-flex flex-column position-absolute" id="shopNow">
           <h1>VOLUME 1</h1>
           <RouterLink to="/Store" class="">
-            <button class="btn btn-light p-3 w-100" type="button">LIMITED STOCK - PREORDER NOW</button>
+            <button class="btn btn-light p-3 w-100" type="button">LIMITED STOCK - ORDER NOW</button>
           </RouterLink>
         </div>
         <img class="img-fluid" src="../assets/Images/Main_Page_First_Pic.jpg" alt="">
@@ -35,7 +35,7 @@
       <div class="col-1">
 
       </div>
-      <div class="col m-5 pb-5 pt-5" :style="{overflowX: 'auto', height: '40vh'}">
+      <div class="col m-5 pb-5 pt-5 example" :style="{overflowX: 'auto', height: '40vh'}">
         <p class="text-end" id="homeTxt">
         Aporia is a New Orleans based fashion brand that sits on the crux of luxury and streetwear. The inspiration for our vision comes from a combination of stories, cultures, and ideologies shared between members who originate from all different walks of life. Young and ambitious, Aporia strives to define and redefine how creative expression and unique perspective can fuel next level design and an ever changing aesthetic. We discover and create within a state of apophenia, or a tendency to perceive meaningful connections between unrelated things. Seeking to reveal the full narrative through an all encompassing perspective, the lessons and stories that inspire our creativity lives in every thread and stitch of every piece of our incomparable apparel. 
         </p>
@@ -261,5 +261,16 @@ export default {
         margin-bottom: 0;
         margin-top: 0;
         margin-left: 5vw;
-    }
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
 </style>
