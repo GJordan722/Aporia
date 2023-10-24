@@ -1,6 +1,25 @@
-<template>
+<script setup>
+  import { ref } from 'vue';
+  const screenWidth = ref(window.innerWidth).value;
+  var mobile = screenWidth > 768 ? false : true;
+</script>
 
-  <div class="container-fluid position-relative" id="homePage">
+<template>
+<div>
+  <div v-if="mobile">
+    <div class="d-flex flex-column align-items-center mx-2 position-relative ">
+      <div class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column position-absolute w-75 px-2" id="shopNow" style="top: 2vh;">
+          <h1 class="w-100" style="color: #C8020D;">V1 COLLECTION OUT NOW</h1>
+          <RouterLink to="/Store" class="">
+            <button class="btn btn-light p-3 w-100" type="button" style="font-size: 1.3rem; font-weight: 700;">SHOP</button>
+          </RouterLink>
+        </div>
+        <img class="img-fluid " src="../assets/Images/folieadeux.jpg" alt="" style="height: 80vh;">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid position-relative" v-else>
     <div class="d-flex flex-column align-items-center pb-4 position-relative ">
       <div class="w-75 d-flex flex-column align-items-center">
         <div class="d-flex flex-column position-absolute" id="shopNow">
@@ -8,7 +27,7 @@
           <RouterLink to="/Store" class="">
             <button class="btn btn-light p-3 w-100" type="button">LIMITED STOCK - PREORDER NOW</button>
           </RouterLink>
-          </div>
+        </div>
         <img class="img-fluid" src="../assets/Images/Main_Page_First_Pic.jpg" alt="">
       </div>
     </div>
@@ -30,7 +49,7 @@
       <div class="w-75 pb-5">
         <img class="img-fluid" src="../assets/Images/Main_Page_Second_Pic.jpg" alt="">
       </div>
-      <div class="m-5 pt-5" id="timer">
+      <div class="pt-5 container-fluid text-center" id="timer">
         V1 COLLECTION ENDS
       </div>
       <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
@@ -91,49 +110,53 @@
       </div>
     </div>
   </div>
+</div>
+  
 </template>
 
 <script>
 
-
 export default {
     data() {
         return {
-            counter: ""
+            counter: "",
+            mobile: ref(window.innerWidth).value > 768 ? false : true
         }
     },
     methods: {
       timer() {
-        // Set the date we're counting down to
-        var countDownDate = new Date("Dec 13, 2023 20:00:00").getTime();
+        if (!this.mobile) {
+          // Set the date we're counting down to
+          var countDownDate = new Date("Dec 13, 2023 20:00:00").getTime();
 
-        // Update the count down every 1 second
-        this.counter = setInterval(function() {
+          // Update the count down every 1 second
+          this.counter = setInterval(function() {
 
-          // Get today's date and time
-          var now = new Date().getTime();
+            // Get today's date and time
+            var now = new Date().getTime();
 
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24)) < 10 ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24)).toString() : Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10 ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString() : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString();
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000) < 10 ? "0" + Math.floor((distance % (1000 * 60)) / 1000) : Math.floor((distance % (1000 * 60)) / 1000);
 
-          // Display the result in the element with id="demo"
-          document.getElementById("days").innerHTML = days + ":";
-          document.getElementById("hours").innerHTML = hours + ":";
-          document.getElementById("minutes").innerHTML =  minutes + ":";
-          document.getElementById("seconds").innerHTML = seconds + "";
+            // Display the result in the element with id="demo"
+            document.getElementById("days").innerHTML = days + ":";
+            document.getElementById("hours").innerHTML = hours + ":";
+            document.getElementById("minutes").innerHTML =  minutes + ":";
+            document.getElementById("seconds").innerHTML = seconds + "";
 
-          // If the count down is finished, write some text
-          if (distance < 0) {
-            clearInterval(this.counter);
-            
-          }
-        });
+            // If the count down is finished, write some text
+            if (distance < 0) {
+              clearInterval(this.counter);
+              
+            }
+          });
+        }
       }
     },
     mounted() {
@@ -190,9 +213,9 @@ export default {
 
 #timer {
   color: #C8020D;
-  font-size: 6rem;
+  font-size: calc(100% + 1vw + 1.2vh);
   font-weight: lighter;
-  letter-spacing: -.3rem;
+  letter-spacing: 0;
   line-height: .1rem;
   font-family: 'NEXT ART Bold';
 }
@@ -231,4 +254,12 @@ export default {
   top: 210vh;
   left: 55vw;
 }
+
+#navHr {
+        width: 90vw;
+        border-top: .40rem solid #1B7367;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 5vw;
+    }
 </style>
