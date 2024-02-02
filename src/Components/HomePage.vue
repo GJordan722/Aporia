@@ -50,39 +50,27 @@
         <img class="img-fluid" src="../assets/Images/Main_Page_Second_Pic.jpg" alt="">
       </div>
       <div class="pt-5 container-fluid text-center" id="timer">
-        V1 COLLECTION ENDS
+        APORIA
       </div>
       <div id="demo" class="d-inline-flex flex-row justify-content-center flex-wrap">
         <div class="d-flex flex-column">
-          <h1 id="days" class=""></h1>
+          <h1 id="days" class="">77:</h1>
           <h4 class="text-center">DAY</h4>
         </div>
         <div class="d-flex flex-column">
-          <h1 id="hours" class=""></h1>
+          <h1 id="hours" class="">77:</h1>
           <h4 class="text-center">HOUR</h4>
         </div>
         <div class="d-flex flex-column">
-          <h1 id="minutes" class=""></h1>
+          <h1 id="minutes" class="">77:</h1>
           <h4 class="text-center">MIN</h4>
         </div>
         <div class="d-flex flex-column">
-          <h1 id="seconds" class=""></h1>
+          <h1 id="seconds" class="">77</h1>
           <h4 class="text-center">SEC</h4>
         </div>
      </div>
-      <div class="row">
-        <div class="col-3">
-
-        </div>
-        <div class="col">
-          <p id="homeTxt" class="pb-5 mb-5">
-            Pre-Orders end and the market will open for routine operation at the end of the timer. Pre-Orders should be received at least two week after the timer end.
-          </p>
-        </div>
-        <div class="col-3">
-
-        </div>
-      </div>
+     <p id="timerTxt" class="pb-5 mb-5">Coming Soon....</p>
       <div class="d-flex flex-column align-items-center w-100 pt-5 pb-5 mb-5 ">
         <div class="w-75">
           <div class="row position-relative">
@@ -127,7 +115,7 @@ export default {
       timer() {
         if (!this.mobile) {
           // Set the date we're counting down to
-          var countDownDate = new Date("Dec 13, 2023 20:00:00").getTime();
+          var countDownDate = new Date("Dec 13, 2024 20:00:00").getTime();
 
           // Update the count down every 1 second
           this.counter = setInterval(function() {
@@ -160,7 +148,7 @@ export default {
       }
     },
     mounted() {
-      this.timer();
+      // this.timer();
     },
     beforeUnmount() {
       clearInterval(this.counter);
@@ -189,6 +177,14 @@ export default {
   font-weight:200;
   word-spacing: .3rem;
   line-height: 3.5rem;
+}
+
+#timerTxt {
+  color: rgba(10,10,10,.5);
+  font-size: 1.2rem;
+  font-weight:200;
+  word-spacing: .3rem;
+  /* line-height: 3.5rem; */
 }
 
 #shopNow {
