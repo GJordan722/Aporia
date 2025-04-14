@@ -216,7 +216,7 @@
                             <h1 id="tagTxt">CLASSICS</h1>
                         </button>
                     </div>
-                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#76C8BF', left: '37vw'}" id="tag2Div">
+                    <div class="d-flex flex-row justify-content-center border border-dark position-absolute" :style="{width: '40vh', height: '7vh', zIndex: '1', top: '-0.5vh', background: '#76C8BF', left: '40vw'}" id="tag2Div">
                         <button @click="shiftTag" class="w-100 btn" id="tag2">
                             <h1 id="tagTxt">LIMITED</h1>
                         </button>
